@@ -1,0 +1,19 @@
+import 'dart:io';
+import 'dart:math';
+void main(List<String> args) {
+  var list = [];
+    for ( int i = 0; i < 10; i++){
+  list.add(Random().nextInt(10));
+    }
+    print(list);
+  int minInd = 0;
+  int min = list.first;
+    for (int i = 0; i<list.length;i++){
+      if (min>list[i]){
+        min = list[i];
+        minInd = i;
+    }
+  }
+  print(min);
+  print(minInd);
+}
