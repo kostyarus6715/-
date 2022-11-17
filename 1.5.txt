@@ -1,0 +1,24 @@
+import 'dart:io';
+import 'dart:math';
+
+
+void main() {
+print("Задайте длину списка");
+int a = int.parse(stdin.readLineSync()!);
+  List<int> list(int min, int max) {
+    List<int> ai =
+      List.generate(a, (index) => (Random().nextInt(max - 0) + min));
+
+  return (ai);
+}
+  print("Введите минимальный диапазон");
+  int min = int.parse(stdin.readLineSync()!);
+  print("Введите максимальный диапазон");
+  int max = int.parse(stdin.readLineSync()!);
+
+  List ai = list(min, max);
+
+  for (int i = 0; i < ai.length; i++) {
+    stdout.write("${ai[i]} ");
+  }
+}
