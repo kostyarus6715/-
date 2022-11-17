@@ -1,0 +1,28 @@
+import 'dart:io';
+import 'dart:math';
+void main() {
+  
+int list_lenght = 0;
+double sredn = 0;
+double sum = 0;
+int umn = 1;
+bool a = true;
+
+  while (a) {
+    int b = int.parse(stdin.readLineSync()!);
+
+    if (b == 0) {
+      a = false; }  
+
+      else {
+        list_lenght++;
+        sum += b;
+        umn *= b;}
+
+  }
+sredn = ((sum / list_lenght));
+
+print('Сумма= $sum');
+print('Произведение= $umn');
+print('Среднее= $sredn');
+}
