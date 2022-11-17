@@ -1,0 +1,10 @@
+import 'dart:io';
+void main() {
+List<int> list = [100];
+
+int i;
+  for(i = 0; i<99;i++){
+    list.add(list[i] - 3);}
+
+print(list);
+}
