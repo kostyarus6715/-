@@ -1,0 +1,28 @@
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+List<int> minus(List<List<int>> temp) {
+  List<int> sredn_temp = [];
+  for (int x = 0; x < 12; x++) {
+      int a = 0;
+    for (int y = 0; y < 30; y++) {
+    a += temp[x][y];
+    }
+   a ~/= 30; 
+  sredn_temp.add(a);
+  }
+  return (sredn_temp);
+}
+
+  int max = 35;
+  int min = -25;
+
+  List<List<int>> temp = List.generate(
+      12, (x) => List.generate(
+      30, (y) => min + Random().nextInt(max - min)));
+    List<int> sredn_temp = minus(temp);
+    print('Средняя температура $sredn_temp');
+    sredn_temp.sort();
+    print('Сорт. по возростанию $sredn_temp');
+}
