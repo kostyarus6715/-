@@ -1,0 +1,32 @@
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+Map<String,dynamic> minus(Map<String,dynamic> temp) {
+for(String key in temp.keys){
+  double a = 0;
+  for (int x=0; x<30;x++){
+    a +=temp[key][x];
+  }
+temp[key] = a ~/30;}
+
+  return (temp);
+}
+
+Map <String,dynamic> temp = {
+'Январь': List.generate(30, (x) => -26 + Random().nextInt(-16 - -26)),
+'Февраль': List.generate(30, (x) => -24 + Random().nextInt(-13 - -24)),
+'Март': List.generate(30, (x) => -16 + Random().nextInt(-3 - -16)),
+'Апрель': List.generate(30, (x) => -7 + Random().nextInt(4 - -7)),
+'Май': List.generate(30, (x) => 2 + Random().nextInt(12 - 2)),
+'Июнь': List.generate(30, (x) => 10 + Random().nextInt(21 - 10)),
+'Июль': List.generate(30, (x) => 12 + Random().nextInt(23 - 12)),
+'август': List.generate(30, (x) => 9 + Random().nextInt(20 - 9)),
+'Сентябрь': List.generate(30, (x) => 3 + Random().nextInt(13 - 3)),
+'Октябрь': List.generate(30, (x) => -4 + Random().nextInt(3 - -4)),
+'Ноябрь': List.generate(30, (x) => -16 + Random().nextInt(-7 - -16)),
+'Декабрь': List.generate(30, (x) => -23 + Random().nextInt(-13 - -23)),
+};
+
+print(minus(temp));
+}
