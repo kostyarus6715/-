@@ -2,7 +2,7 @@ import 'dart:io';
 import 'dart:math';
 
 void main(List<String> arguments) {
-  List<String> lines = new File('nums.txt').readAsLinesSync();
+  List<String> lines = new File('nums1.txt').readAsLinesSync();
   for (var line in lines) {
     lines = line.split(' ');
   }
